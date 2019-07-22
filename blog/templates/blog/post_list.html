@@ -5,10 +5,17 @@
     <title> Post List </title>
 </head>
 <body>
-    <h1>Post List is Here</h1>
-    <div class="create-post">
+<h1>Post List is Here...</h1>
+<h2>login from:{{ user }}</h2>
+
+    <div class="logot">
+        <a href="{% url 'accounts:logout' %}"><button>Logout</button></a>
+    </div>
+    </br>
+     <div class="create-post">
         <a href="{% url 'post:create' %}"><button>Create-Post</button></a>
     </div>
+
     <div class="posts">
         {% for post in posts %}
             <div class="post">
