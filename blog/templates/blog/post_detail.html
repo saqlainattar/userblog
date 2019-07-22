@@ -1,0 +1,18 @@
+{% load static from staticfiles %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title> Post Detail </title>
+</head>
+<body>
+    <h2>Post detail</h2>
+    <div class="post-detail">
+        <div class="post">
+            <h2>Title : {{ post.title }}</h2>
+            <p>Comment :{{ post.content }}</p>
+            <h4>Create_by :{{ post.author }}</h4>
+            <p>Post Created date:{{ post.created_on }}</p>
+        </div>
+    </div>
+</body>
+</html>
